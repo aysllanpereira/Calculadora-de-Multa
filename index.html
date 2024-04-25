@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets/CSS/multa.css">
+    <link rel="stylesheet" href="Assets/CSS/medias.css">
+    <link rel="shortcut icon" href="Assets/Favicon/calculadora (1).png" type="image/x-icon">
+    <title>Cálculo de Multa</title>
+    
+</head>
+<body>
+    <header class="cabecalho">
+        <h1>CÁLCULO DE MULTA POR ATRASO</h1>
+    </header>
+    <section class="conteudo">
+        <div class="contrato">
+            <p>Contrato:
+                <input type="text" name="contrato" id="icontrato">
+            </p>
+        </div>
+        <div class="valor">
+            <p>Valor:
+                <input type="number" name="Valor" id="ivalor" class="valor-monetario" onkeyup="formatarMoeda(this)">
+            </p>
+            <p>Juros:</p>
+            <select name="selecao" id="iselecao">
+                <option value="0"></option>
+                <option value="1" id="juros1">1</option>
+                <option value="5" id="juros5">5</option>
+                <option value="10" id="juros10">10</option>
+            </select>
+            <p>Data de Quitação:
+                <input type="date" name="data" id="idata">
+            </p>
+            <p>Prazo (em dias):
+                <input type="number" name="prazo" id="iprazo">
+            </p>
+            <p>Data do Dia:
+                <input type="date" name="datadodia" id="idatadodia">
+            </p>
+            <p>Desconto (%):
+                <input type="number" name="desconto" id="idesconto" class="valor-monetario">
+            </p>
+        </div>
+        <p id="diasAtraso"></p>
+        <p id="resultado" class="result"></p>
+
+        <div class="botoes">
+        <button onclick="calcularMulta()">Calcular</button>
+        <button onclick="limpar()">limpar</button>
+        </div>
+
+    </section>
+    <script src="Assets/JS/multa.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+</body>
+</html>

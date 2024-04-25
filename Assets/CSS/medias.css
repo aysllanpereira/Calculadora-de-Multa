@@ -1,0 +1,17 @@
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 12px;
+        margin: 3.5px;
+    }
+
+    input {
+        height: 25px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+
